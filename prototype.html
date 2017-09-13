@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function Person(){
+			this.age =18;
+			this.sex = 'nan';
+			this.name = 'zhangsan';
+		}
+		Person.prototype ={
+			sleep:function(){
+				alert('休息');
+			},
+			play:function(){
+				alert('wan');
+			}
+		}
+		Person.prototype.eat = function(){
+  			alert('eat');
+		}
+		let zhangsan=new Person();
+		console.log(zhangsan);
+		zhangsan.sleep();
+		zhangsan.play();
+		// 属性删除
+		delete zhangsan.sex;
+	</script>
+</body>
+</html>

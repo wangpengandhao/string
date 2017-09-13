@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		/*var str = 'abc';
+		console.log(str.charAt(2));
+		console.log(str.charCodeAt(1));
+		console.log(String.fromCharCode(98));*/
+
+		// 截取
+		/*let str = 'abcdefg';
+		let str1 =slice(2,5);
+		let str1 =slice(2,-1);
+		let str1 =slice(2,str.length-1);
+		let str1 =slice(2);
+		console.log(str1);*/
+		// 替换
+		/*let str = 'abcdefg';
+		let str1 = str.replace('abcd','----');
+		console.log(str1);*/
+		/*let str = 'abcabcabcabc';
+		function replaceAll(str,rStr){
+			// let star= '';
+			// for(i=0;i<rStr.length;i++){
+			// 	star+='*';
+			
+			let star = '*'.repeat(rStr.length)
+			while(str.includes(rStr)){
+				 str=str.replace(rStr,star);
+			}
+			return str;
+		}
+		let str1=replaceAll(str,'a');
+		console.log(str1);*/
+
+		// 匹配 match
+		let url = 'http://www.baidu.comhttp://www.baidu.comhttp://www.baidu.comhttp://www.baidu.comhttp://www.baidu.comhttp://www.baidu.com';
+		function seek(str,rStr){
+				let arr = [];
+				let star = '*'.repeat(rStr.length);
+				while(str.includes(rStr)){
+					arr.push(str.indexOf(rStr));
+					str=str.replace(rStr,star);
+
+				}
+				return arr;
+		}
+		console.log(seek(url,'baidu'));
+		/*let url = 'http://www.baidu.comhttp://www.baidu.comhttp://www.baidu.comhttp://www.baidu.comhttp://www.baidu.comhttp://www.baidu.comhttp://www.baidu.com';
+		function seek(str,rStr){
+			let arr= [];
+			// let star = '*'.repeat(rStr.length);
+			for(i=0;i<str.length;i++){
+				if(str.slice(i,i+5)==rStr){
+					arr.push(i);
+					// str=str.replace(rStr,star);
+				}
+			}
+			return arr;
+		}
+		console.log(seek(url,'baidu'));*/
+	</script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+		function student(){
+			this.name='zhangsan';
+			this.sex='nan';
+			this.age= 18;
+			this.skill=function(){
+				alert('xuexi');
+			}
+		}
+		student.prototype = new person(); //将person中的属性给student继承
+		function person(){
+			this.class='1707-1';
+			this.eat=function(){
+				alert('eat');
+			}
+		}
+		let zhangsan=new student();
+		console.log(zhangsan);
+	</script>
+</body>
+</html>
